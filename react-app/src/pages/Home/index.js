@@ -52,10 +52,10 @@ export default function Home() {
         alt="Left decoration"
         sx={{
           position: "fixed",
-          left: 24,
+          left: 24 + 180,
           top: "50%",
           transform: "translateY(-50%)",
-          height: 180,
+          height: 360,
           zIndex: 10,
           pointerEvents: "none",
           display: { xs: "none", md: "block" },
@@ -72,7 +72,7 @@ export default function Home() {
           right: 24,
           top: "50%",
           transform: "translateY(-50%)",
-          height: 180,
+          height: 360,
           zIndex: 10,
           pointerEvents: "none",
           display: { xs: "none", md: "block" },
