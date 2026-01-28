@@ -24,6 +24,9 @@ import {
   Typography,
 } from "@mui/material";
 
+const LOGO_URL =
+  "https://storage.googleapis.com/my_static_assets/Images/logo.jpg";
+
 export default function Products() {
   const [hasErrors, setErrors] = useState(false);
   const [products, setProducts] = useState([]);
@@ -85,6 +88,21 @@ export default function Products() {
           })}
         </Grid>
       )}
+      {/* Logo (bottom-right corner) */}
+      <Box
+        component="img"
+        src={LOGO_URL}
+        alt="Logo"
+        sx={{
+          position: "fixed",
+          right: 24,
+          bottom: 24,
+          height: 80,
+          zIndex: 11,
+          pointerEvents: "none",
+          opacity: 0.95,
+        }}
+      />
     </Box>
   );
 }

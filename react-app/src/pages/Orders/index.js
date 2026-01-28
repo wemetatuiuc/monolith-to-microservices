@@ -26,6 +26,11 @@ import {
   Typography,
 } from "@mui/material";
 
+const LOGO_URL =
+  "https://storage.googleapis.com/my_static_assets/Images/logo.jpg";
+const MAP_IMAGE_URL =
+  "https://storage.googleapis.com/my_static_assets/Images/BayAreaMap.jpg";
+
 export default function Orders() {
   const history = useHistory();
 
@@ -104,6 +109,37 @@ export default function Orders() {
           </Table>
         </Paper>
       )}
+      {/* Bottom image (centered horizontally) */}
+      <Box
+        component="img"
+        src={MAP_IMAGE_URL}
+        alt="Bottom decoration"
+        sx={{
+          position: "fixed",
+          left: "50%",
+          bottom: 24,
+          transform: "translateX(-50%)",
+          height: 320,          // adjust as needed
+          zIndex: 10,
+          pointerEvents: "none",
+          display: { xs: "none", md: "block" },
+        }}
+      />
+      {/* Logo (bottom-right corner) */}
+      <Box
+        component="img"
+        src={LOGO_URL}
+        alt="Logo"
+        sx={{
+          position: "fixed",
+          right: 24,
+          bottom: 24,
+          height: 80,
+          zIndex: 11,
+          pointerEvents: "none",
+          opacity: 0.95,
+        }}
+      />
     </Box>
   );
 }
